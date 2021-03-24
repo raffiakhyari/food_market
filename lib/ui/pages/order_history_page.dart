@@ -23,7 +23,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
         } else {
           double listItemWidth =
               MediaQuery.of(context).size.width - 2 * defaultMargin;
-
+          //menambah refresh indicator
           return RefreshIndicator(
             onRefresh: () async {
               await context.bloc<TransactionCubit>().getTransactions();
