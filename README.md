@@ -1,6 +1,6 @@
 # food_market
 
-A new Flutter project.
+my first try flutter project making app food market
 
 ## Getting Started
 
