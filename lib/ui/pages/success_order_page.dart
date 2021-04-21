@@ -12,7 +12,7 @@ class SuccessOrderPage extends StatelessWidget {
           buttonTap1: () {
             Get.offAll(MainPage());
           },
-          buttonTitle1: 'Beli Barang Lainnya?',
+          buttonTitle1: 'Beli kebutuhan lainnya',
           buttonTap2: () {
             Get.offAll(MainPage(
               initialPage: 1,

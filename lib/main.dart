@@ -24,4 +24,6 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
+  static init() {}
 }

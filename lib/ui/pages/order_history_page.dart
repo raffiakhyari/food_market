@@ -14,11 +14,14 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
       if (state is TransactionLoaded) {
         if (state.transactions.length == 0) {
           return IllustrationPage(
-            title: 'Ouch! Hungry',
-            subtitle: 'Seems you like have not\nordered any food yet',
-            picturePath: 'assets/love_burger.png',
-            buttonTap1: () {},
-            buttonTitle1: 'Find Foods',
+            title: 'Cari semua kebutuhanmu',
+            subtitle: 'Temukan semua barang\nyang kamu butuhkan',
+            picturePath: 'assets/item_need.png',
+            buttonTap1: () {
+              // Get.to(FoodPage());
+              Get.offAll(MainPage());
+            },
+            buttonTitle1: 'Cari kebutuhanmu',
           );
         } else {
           double listItemWidth =
@@ -48,7 +51,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                             style: blackFontStyle1,
                           ),
                           Text(
-                            'Tunggu pesanan terbaik anda',
+                            'Mohon menunggu pesanan anda',
                             style: greyFontStyle.copyWith(
                                 fontWeight: FontWeight.w300),
                           )

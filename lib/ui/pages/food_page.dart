@@ -57,6 +57,9 @@ class _FoodPageState extends State<FoodPage> {
               ),
             ),
             //// LIST OF FOOD
+            SizedBox(
+              height: 15,
+            ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 30,
@@ -108,7 +111,7 @@ class _FoodPageState extends State<FoodPage> {
               padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 30,
               width: double.infinity,
-              child: Text("Popular", 
+              child: Text("Kategori", 
               style: blackFontStyle1.copyWith(fontWeight: FontWeight.w100),),
             ),
 

@@ -52,7 +52,7 @@ class IllustrationPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8)),
               child: Text(
                 buttonTitle1,
-                style: blackFontStyle3.copyWith(fontWeight: FontWeight.w500),
+                style: whiteFontStyle3.copyWith(fontWeight: FontWeight.w500),
               ),
             ),
           ),

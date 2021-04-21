@@ -79,10 +79,9 @@ class _ProfilePageState extends State<ProfilePage> {
                   Column(
                     children: ((selectedIndex == 0)
                             ? [
-                                'Edit Profile',
-                                'Home Address',
-                                'Security',
-                                'Payment'
+                                'Ubah Profil',
+                                'Pembayaran',
+                                'Keluar'
                               ]
                             : [
                                 'Rate App',

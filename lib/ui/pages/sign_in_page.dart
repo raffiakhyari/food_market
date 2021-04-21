@@ -8,7 +8,11 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
   bool isLoading = false;
+  bool isLogin = false;
+
+  SharedPreferences myPreferences;
 
   @override
   Widget build(BuildContext context) {
@@ -148,3 +152,4 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 }
+

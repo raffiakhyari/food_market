@@ -2,6 +2,7 @@ part of 'pages.dart';
 
 class PaymentPage extends StatefulWidget {
   final Transaction transaction;
+  
 
   PaymentPage({this.transaction});
 
@@ -17,7 +18,9 @@ class _PaymentPageState extends State<PaymentPage> {
     return GeneralPage(
       title: 'Keranjang',
       subtitle: 'Cek kembali pesanan anda',
-      onBackButtonPressed: () {},
+      onBackButtonPressed: () {
+
+      },
       backColor: 'FAFAFC'.toColor(),
       child: Column(
         children: [
@@ -122,65 +125,65 @@ class _PaymentPageState extends State<PaymentPage> {
                   ],
                 ),
                 SizedBox(
-                  height: 6,
+                  height: 3,
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                        width: MediaQuery.of(context).size.width / 2 -
-                            defaultMargin -
-                            5,
-                        child: Text(
-                          'Driver',
-                          style: greyFontStyle,
-                        )),
-                    SizedBox(
-                        width: MediaQuery.of(context).size.width / 2 -
-                            defaultMargin -
-                            5,
-                        child: Text(
-                          NumberFormat.currency(
-                                  locale: 'id-ID',
-                                  symbol: 'IDR ',
-                                  decimalDigits: 0)
-                              .format(50000),
-                          style: blackFontStyle3,
-                          textAlign: TextAlign.right,
-                        ))
-                  ],
-                ),
+                // Row(
+                //   crossAxisAlignment: CrossAxisAlignment.start,
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     SizedBox(
+                //         width: MediaQuery.of(context).size.width / 2 -
+                //             defaultMargin -
+                //             5,
+                //         child: Text(
+                //           'Driver',
+                //           style: greyFontStyle,
+                //         )),
+                //     SizedBox(
+                //         width: MediaQuery.of(context).size.width / 2 -
+                //             defaultMargin -
+                //             5,
+                //         child: Text(
+                //           NumberFormat.currency(
+                //                   locale: 'id-ID',
+                //                   symbol: 'IDR ',
+                //                   decimalDigits: 0)
+                //               .format(50000),
+                //           style: blackFontStyle3,
+                //           textAlign: TextAlign.right,
+                //         ))
+                //   ],
+                // ),
                 SizedBox(
                   height: 6,
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                        width: MediaQuery.of(context).size.width / 2 -
-                            defaultMargin -
-                            5,
-                        child: Text(
-                          'Tax 10%',
-                          style: greyFontStyle,
-                        )),
-                    SizedBox(
-                        width: MediaQuery.of(context).size.width / 2 -
-                            defaultMargin -
-                            5,
-                        child: Text(
-                          NumberFormat.currency(
-                                  locale: 'id-ID',
-                                  symbol: 'IDR ',
-                                  decimalDigits: 0)
-                              .format(widget.transaction.total * 0.1),
-                          style: blackFontStyle3,
-                          textAlign: TextAlign.right,
-                        ))
-                  ],
-                ),
+                // Row(
+                //   crossAxisAlignment: CrossAxisAlignment.start,
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     SizedBox(
+                //         width: MediaQuery.of(context).size.width / 2 -
+                //             defaultMargin -
+                //             5,
+                //         child: Text(
+                //           'Tax 10%',
+                //           style: greyFontStyle,
+                //         )),
+                //     SizedBox(
+                //         width: MediaQuery.of(context).size.width / 2 -
+                //             defaultMargin -
+                //             5,
+                //         child: Text(
+                //           NumberFormat.currency(
+                //                   locale: 'id-ID',
+                //                   symbol: 'IDR ',
+                //                   decimalDigits: 0)
+                //               .format(widget.transaction.total * 0.1),
+                //           style: blackFontStyle3,
+                //           textAlign: TextAlign.right,
+                //         ))
+                //   ],
+                // ),
                 SizedBox(
                   height: 6,
                 ),
@@ -205,7 +208,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                   locale: 'id-ID',
                                   symbol: 'IDR ',
                                   decimalDigits: 0)
-                              .format(widget.transaction.total * 1.1 + 50000),
+                              .format(widget.transaction.total),
                           style: blackFontStyle3.copyWith(
                               fontWeight: FontWeight.w500,
                               color: '1ABC9C'.toColor()),
@@ -353,8 +356,7 @@ class _PaymentPageState extends State<PaymentPage> {
                           .bloc<TransactionCubit>()
                           .submitTransaction(widget.transaction.copyWith(
                               dateTime: DateTime.now(),
-                              total: (widget.transaction.total * 1.1).toInt() +
-                                  50000));
+                              total: (widget.transaction.total).toInt()));
 
                       if (paymentURL != null) {
                         Get.to(PaymentMethodPage(paymentURL));
@@ -383,7 +385,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8)),
                     child: Text(
-                      "Periksa Sekarang",
+                      "Pesan Sekarang",
                       style:
                           whiteFontStyle3.copyWith(fontWeight: FontWeight.w500),
                     ),

@@ -201,7 +201,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(8)),
                                 child: Text(
-                                  'Order Now',
+                                  'Pesan',
                                   style: whiteFontStyle3.copyWith(
                                        fontWeight: FontWeight.w500),
                                 ),

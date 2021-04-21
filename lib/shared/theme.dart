@@ -22,4 +22,6 @@ TextStyle whiteFontStyle3 = GoogleFonts.poppins().copyWith(
   color: Colors.white,
 );
 
+const textBlackColor = Color(0xFF3A3A3A);
+
 const double defaultMargin = 24;

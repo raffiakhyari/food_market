@@ -30,20 +30,21 @@ class FoodCard extends StatelessWidget {
             margin: EdgeInsets.fromLTRB(12, 12, 12, 6),
             width: 200,
             child: Text(
-              "food.name",
+              food.name,
               style: blackFontStyle2,
               maxLines: 1,
               overflow: TextOverflow.clip,
             ),
           ),
           Container(
-            margin: EdgeInsets.only(right: 10),
-            width: 200,
-            child: Text(
-              "Deskripsi", //masih harus diubah
-              style: blackFontStyle2,
-              // maxLines: 1,
-              overflow: TextOverflow.clip,
+            margin: EdgeInsets.fromLTRB(1, 1, 1, 3),
+            width: 178,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Tersedia",
+                style: blackFontStyle2,)
+              ],
             ),
           ),
           // Padding(
