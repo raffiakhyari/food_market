@@ -15,8 +15,8 @@ class _PaymentPageState extends State<PaymentPage> {
   @override
   Widget build(BuildContext context) {
     return GeneralPage(
-      title: 'Payment',
-      subtitle: 'You deserve better meal',
+      title: 'Keranjang',
+      subtitle: 'Cek kembali pesanan anda',
       onBackButtonPressed: () {},
       backColor: 'FAFAFC'.toColor(),
       child: Column(
@@ -31,7 +31,7 @@ class _PaymentPageState extends State<PaymentPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Item Ordered',
+                  'Item Pembelian',
                   style: blackFontStyle3,
                 ),
                 SizedBox(
@@ -90,7 +90,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 Padding(
                   padding: EdgeInsets.only(top: 16, bottom: 8),
                   child: Text(
-                    'Details Transaction',
+                    'Detail Transaksi',
                     style: blackFontStyle3,
                   ),
                 ),
@@ -226,7 +226,7 @@ class _PaymentPageState extends State<PaymentPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Deliver to',
+                  'Alamat pemesanan',
                   style: blackFontStyle3,
                 ),
                 SizedBox(
@@ -239,7 +239,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     SizedBox(
                         width: 80,
                         child: Text(
-                          'Name',
+                          'Nama',
                           style: greyFontStyle,
                         )),
                     SizedBox(
@@ -261,7 +261,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Phone Number',
+                      'Nomor Handphone',
                       style: greyFontStyle,
                     ),
                     Text(
@@ -281,7 +281,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     SizedBox(
                         width: 80,
                         child: Text(
-                          'Address',
+                          'Alamat',
                           style: greyFontStyle,
                         )),
                     SizedBox(
@@ -303,7 +303,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'House Number',
+                      'Nomor Rumah',
                       style: greyFontStyle,
                     ),
                     Text(
@@ -321,7 +321,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'City',
+                      'Kota',
                       style: greyFontStyle,
                     ),
                     Text(
@@ -367,13 +367,13 @@ class _PaymentPageState extends State<PaymentPage> {
                             icon: Icon(MdiIcons.closeCircleOutline,
                                 color: Colors.white),
                             titleText: Text(
-                              'Transaction Failed',
+                              'Transaksi Gagal',
                               style: GoogleFonts.poppins(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600),
                             ),
                             messageText: Text(
-                              'Please try again later.',
+                              'Harap mencoba kembali',
                               style: GoogleFonts.poppins(color: Colors.white),
                             ));
                       }
@@ -383,9 +383,9 @@ class _PaymentPageState extends State<PaymentPage> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8)),
                     child: Text(
-                      "Checkout Now",
+                      "Periksa Sekarang",
                       style:
-                          blackFontStyle3.copyWith(fontWeight: FontWeight.w500),
+                          whiteFontStyle3.copyWith(fontWeight: FontWeight.w500),
                     ),
                   ),
                 )

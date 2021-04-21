@@ -13,15 +13,15 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return GeneralPage(
-      title: 'Sign In',
-      subtitle: "Find your best ever meal",
+      title: 'Masuk',
+      subtitle: "Temukan barang yang anda inginkan",
       child: Column(
         children: [
           Container(
             width: double.infinity,
             margin: EdgeInsets.fromLTRB(defaultMargin, 26, defaultMargin, 6),
             child: Text(
-              "Email Address",
+              "Alamat Email",
               style: blackFontStyle2,
             ),
           ),
@@ -37,14 +37,14 @@ class _SignInPageState extends State<SignInPage> {
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintStyle: greyFontStyle,
-                  hintText: 'Type your email address'),
+                  hintText: 'Masukkan alamat email'),
             ),
           ),
           Container(
             width: double.infinity,
             margin: EdgeInsets.fromLTRB(defaultMargin, 16, defaultMargin, 6),
             child: Text(
-              "Password",
+              "Kata sandi",
               style: blackFontStyle2,
             ),
           ),
@@ -61,7 +61,7 @@ class _SignInPageState extends State<SignInPage> {
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintStyle: greyFontStyle,
-                  hintText: 'Type your password'),
+                  hintText: 'Masukkan kata sandi'),
             ),
           ),
           Container(
@@ -93,7 +93,7 @@ class _SignInPageState extends State<SignInPage> {
                               color: Colors.white,
                             ),
                             titleText: Text(
-                              "Sign In Failed",
+                              "Gagal Masuk",
                               style: GoogleFonts.poppins(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600),
@@ -112,9 +112,9 @@ class _SignInPageState extends State<SignInPage> {
                         borderRadius: BorderRadius.circular(8)),
                     color: mainColor,
                     child: Text(
-                      'Sign In',
+                      'Masuk',
                       style: GoogleFonts.poppins(
-                          color: Colors.black, fontWeight: FontWeight.w500),
+                          color: Colors.white, fontWeight: FontWeight.w500),
                     ),
                   ),
           ),
@@ -137,7 +137,7 @@ class _SignInPageState extends State<SignInPage> {
                         borderRadius: BorderRadius.circular(8)),
                     color: greyColor,
                     child: Text(
-                      'Create New Account',
+                      'Buat Akun Baru',
                       style: GoogleFonts.poppins(
                           color: Colors.white, fontWeight: FontWeight.w500),
                     ),

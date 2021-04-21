@@ -39,7 +39,8 @@ class FoodListItem extends StatelessWidget {
             ],
           ),
         ),
-        RatingStars(food.rate)
+        Text("Deskripsi\ndihapus")
+        // RatingStars(food.rate)
       ],
     );
   }

@@ -92,7 +92,8 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                                 SizedBox(
                                   height: 6,
                                 ),
-                                RatingStars(widget.transaction.food.rate)
+                                // RatingStars(widget.transaction.food.rate)
+                                Text("Quantity Item")
                               ],
                             ),
                             Row(
@@ -146,7 +147,8 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                         Container(
                           margin: EdgeInsets.fromLTRB(0, 14, 0, 16),
                           child: Text(
-                            widget.transaction.food.description,
+                            // widget.transaction.food.description,
+                            "Deskripsi",
                             style: greyFontStyle,
                           ),
                         ),
@@ -168,7 +170,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Total Price',
+                                  'Total Harga',
                                   style: greyFontStyle.copyWith(fontSize: 13),
                                 ),
                                 Text(
@@ -200,8 +202,8 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                                     borderRadius: BorderRadius.circular(8)),
                                 child: Text(
                                   'Order Now',
-                                  style: blackFontStyle3.copyWith(
-                                      fontWeight: FontWeight.w500),
+                                  style: whiteFontStyle3.copyWith(
+                                       fontWeight: FontWeight.w500),
                                 ),
                               ),
                             )

@@ -9,8 +9,7 @@ class Food extends Equatable {
   final String description;
   final String ingredients;
   final int price;
-  final double rate;
-  final List<FoodType> types;
+  final List<FoodType> types; //final double rate
 
   Food(
       {this.id,
@@ -19,8 +18,7 @@ class Food extends Equatable {
       this.description,
       this.ingredients,
       this.price,
-      this.rate,
-      this.types = const []});
+      this.types = const []}); //this rate
 
   factory Food.fromJson(Map<String, dynamic> data) => Food(
       id: data['id'],
@@ -29,7 +27,7 @@ class Food extends Equatable {
       description: data['description'],
       ingredients: data['ingredients'],
       price: data['price'],
-      rate: (data['rate'] as num).toDouble(),
+      // rate: (data['rate'] as num).toDouble(),
       types: data['types'].toString().split(',').map((e) {
         switch (e) {
           case 'recommended':
@@ -45,7 +43,7 @@ class Food extends Equatable {
 
   @override
   List<Object> get props =>
-      [id, picturePath, name, description, ingredients, price, rate];
+      [id, picturePath, name, description, ingredients, price]; //rate
 }
 
 List<Food> mockFoods = [
@@ -57,7 +55,7 @@ List<Food> mockFoods = [
       description: "Sate Sayur Sultan adalah menu sate vegan paling terkenal di Bandung. Sate ini dibuat dari berbagai macam bahan bermutu tinggi. Semua bahan ditanam dengan menggunakan teknologi masa kini sehingga memiliki nutrisi yang kaya.",
       ingredients: "Bawang Merah, Paprika, Bawang Bombay, Timun",
       price: 150000,
-      rate: 4.2,
+      // rate: 4.2,
       types: [FoodType.new_food, FoodType.recommended, FoodType.popular]),
   Food(
       id: 2,
@@ -68,7 +66,8 @@ List<Food> mockFoods = [
           "Daging sapi Korea adalah jenis sapi paling premium di Korea. Namun, untuk menikmatinya Anda tidak perlu jauh-jauh ke Korea Selatan. Steak Sapi Korea Oppa Bandung ini sudah terkenal di seluruh Indonesia dan sudah memiliki lebih dari 2 juta cabang.",
       ingredients: "Daging Sapi Korea, Garam, Lada Hitam",
       price: 750000,
-      rate: 4.5),
+      // rate: 4.5),
+      types: [FoodType.new_food, FoodType.recommended, FoodType.popular]),
   Food(
       id: 3,
       picturePath:
@@ -77,7 +76,7 @@ List<Food> mockFoods = [
       description: "Salad ala mexico yang kaya akan serat dan vitamin. Seluruh bahan diambil dari Mexico sehingga akan memiliki cita rasa yang original.",
       ingredients: "Jagung, Selada, Tomat Ceri, Keju, Wortel",
       price: 105900,
-      rate: 3.9,
+      // rate: 3.9,
       types: [FoodType.new_food]),
   Food(
       id: 4,
@@ -87,7 +86,7 @@ List<Food> mockFoods = [
       description: "Sup wortel pedas yang unik ini cocok banget buat kalian-kalian yang suka pedas namun ingin tetap sehat. Rasanya yang unik akan memanjakan lidah Anda.",
       ingredients: "Wortel, Seledri, Kacang Tanah, Labu, Garam, Gula",
       price: 60000,
-      rate: 4.9,
+      // rate: 4.9,
       types: [FoodType.recommended]),
   Food(
       id: 5,
@@ -98,5 +97,6 @@ List<Food> mockFoods = [
           "Daging sapi Korea cincang yang disajikan mentah dan disiram saus spesial dengan toping kuning telur dan taburan biji wijen.",
       ingredients: "Daging Sapi Korea, Telur, Biji Wijen",
       price: 350000,
-      rate: 3.4)
+      // rate: 3.4)
+      types: [FoodType.new_food, FoodType.recommended, FoodType.popular]),
 ];

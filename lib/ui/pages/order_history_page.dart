@@ -44,11 +44,11 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Your Orders',
+                            'Pesanan Anda',
                             style: blackFontStyle1,
                           ),
                           Text(
-                            'Wait for the best meal',
+                            'Tunggu pesanan terbaik anda',
                             style: greyFontStyle.copyWith(
                                 fontWeight: FontWeight.w300),
                           )
@@ -62,7 +62,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                       child: Column(
                         children: [
                           CustomTabBar(
-                            titles: ['In Progress', 'Past Orders'],
+                            titles: ['Sedang Proses', 'Selesai'],
                             selectedIndex: selectedIndex,
                             onTap: (index) {
                               setState(() {

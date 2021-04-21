@@ -31,11 +31,11 @@ class _FoodPageState extends State<FoodPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Food Market',
-                        style: blackFontStyle1,
+                        (context.bloc<UserCubit>().state as UserLoaded).user.name,
+                      style: blackFontStyle1.copyWith(fontWeight: FontWeight.w500)
                       ),
                       Text(
-                        "Let's get some foods",
+                        "Selamat datang di UB Duren Sawit",
                         style:
                             greyFontStyle.copyWith(fontWeight: FontWeight.w300),
                       ),
@@ -58,6 +58,61 @@ class _FoodPageState extends State<FoodPage> {
             ),
             //// LIST OF FOOD
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+              height: 30,
+              width: double.infinity,
+              child: Text("Terbaru", 
+              style: blackFontStyle1.copyWith(fontWeight: FontWeight.w100),),
+            ),
+            Container(
+              height: 258,
+              width: double.infinity,
+              child: BlocBuilder<FoodCubit, FoodState>(
+                builder: (_, state) => (state is FoodLoaded)
+                    ? ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          Row(
+                            children: state.foods
+                                .map((e) => Padding(
+                                      padding: EdgeInsets.only(
+                                          left: (e == state.foods.first)
+                                              ? defaultMargin
+                                              : 0,
+                                          right: defaultMargin),
+                                      child: GestureDetector(
+                                          onTap: () {
+                                            Get.to(FoodDetailsPage(
+                                              transaction: Transaction(
+                                                  food: e,
+                                                  user: (context
+                                                          .bloc<UserCubit>()
+                                                          .state as UserLoaded)
+                                                      .user),
+                                              onBackButtonPressed: () {
+                                                Get.back();
+                                              },
+                                            ));
+                                          },
+                                          child: FoodCard(e)),
+                                    ))
+                                .toList(),
+                          )
+                        ],
+                      )
+                    : Center(child: loadingIndicator),
+              ),
+            ),
+
+              Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+              height: 30,
+              width: double.infinity,
+              child: Text("Popular", 
+              style: blackFontStyle1.copyWith(fontWeight: FontWeight.w100),),
+            ),
+
+             Container(
               height: 258,
               width: double.infinity,
               child: BlocBuilder<FoodCubit, FoodState>(
@@ -103,7 +158,7 @@ class _FoodPageState extends State<FoodPage> {
               child: Column(
                 children: [
                   CustomTabBar(
-                    titles: ['New Taste', 'Popular', 'Recommended'],
+                    titles: ['Terbaru', 'Popular', 'Recommended'],
                     selectedIndex: selectedIndex,
                     onTap: (index) {
                       setState(() {

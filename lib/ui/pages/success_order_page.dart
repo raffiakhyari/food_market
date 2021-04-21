@@ -6,19 +6,19 @@ class SuccessOrderPage extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         body: IllustrationPage(
-          title: "You've Made Order",
-          subtitle: "Just stay at home while we are\npreparing your best foods",
+          title: "Berhasil Melakukan Pembelian",
+          subtitle: "Tetap di rumah\nKami akan mengantar",
           picturePath: 'assets/bike.png',
           buttonTap1: () {
             Get.offAll(MainPage());
           },
-          buttonTitle1: 'Order Other Foods',
+          buttonTitle1: 'Beli Barang Lainnya?',
           buttonTap2: () {
             Get.offAll(MainPage(
               initialPage: 1,
             ));
           },
-          buttonTitle2: 'View My Order',
+          buttonTitle2: 'Lihat Pembelian Saya',
         ));
   }
 }

@@ -16,8 +16,8 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return GeneralPage(
-      title: 'Sign Up',
-      subtitle: "Register and eat",
+      title: 'Daftar Akun',
+      subtitle: "Daftar dan belanja",
       onBackButtonPressed: () {
         Get.back();
       },
@@ -61,7 +61,7 @@ class _SignUpPageState extends State<SignUpPage> {
             width: double.infinity,
             margin: EdgeInsets.fromLTRB(defaultMargin, 16, defaultMargin, 6),
             child: Text(
-              "Full Name",
+              "Nama Lengkap",
               style: blackFontStyle2,
             ),
           ),
@@ -77,14 +77,14 @@ class _SignUpPageState extends State<SignUpPage> {
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintStyle: greyFontStyle,
-                  hintText: 'Type your full name'),
+                  hintText: 'Masukkan nama lengkap'),
             ),
           ),
           Container(
             width: double.infinity,
             margin: EdgeInsets.fromLTRB(defaultMargin, 16, defaultMargin, 6),
             child: Text(
-              "Email Address",
+              "Alamat Email",
               style: blackFontStyle2,
             ),
           ),
@@ -100,14 +100,14 @@ class _SignUpPageState extends State<SignUpPage> {
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintStyle: greyFontStyle,
-                  hintText: 'Type your email address'),
+                  hintText: 'Masukkan alamat email'),
             ),
           ),
           Container(
             width: double.infinity,
             margin: EdgeInsets.fromLTRB(defaultMargin, 16, defaultMargin, 6),
             child: Text(
-              "Password",
+              "Kata Sandi",
               style: blackFontStyle2,
             ),
           ),
@@ -124,7 +124,7 @@ class _SignUpPageState extends State<SignUpPage> {
               decoration: InputDecoration(
                   border: InputBorder.none,
                   hintStyle: greyFontStyle,
-                  hintText: 'Type your password'),
+                  hintText: 'Masukkan kata sandi'),
             ),
           ),
           Container(
@@ -147,7 +147,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   borderRadius: BorderRadius.circular(8)),
               color: mainColor,
               child: Text(
-                'Continue',
+                'Lanjut',
                 style: GoogleFonts.poppins(
                     color: Colors.black, fontWeight: FontWeight.w500),
               ),
